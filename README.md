@@ -29,4 +29,6 @@ uv 0.8.3 (7e78f54e7 2025-07-24)
 
 ```bash
 (.venv) takashi@Mac rss-maker % uv add requests==2.32.4
+(.venv) takashi@Mac rss-maker % uv add beautifulsoup4==4.13.4
+(.venv) takashi@Mac rss-maker % uv add feedgenerator==2.2.0
 ```
