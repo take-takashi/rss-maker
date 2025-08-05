@@ -8,6 +8,25 @@ def get_html(url: str) -> str:
     response.raise_for_status()  # エラーがあれば例外を発生させる
     return response.text
 
+def parse_channel_info_from_audee_page(html: str) -> dict:
+    """AuDeeの番組ページHTMLからチャンネル情報を抽出します。"""
+    soup = BeautifulSoup(html, "html.parser")
+
+    title_tag = soup.select_one("meta[property='og:title']")
+    description_tag = soup.select_one("meta[name='description']")
+
+    title_val = title_tag.get("content") if title_tag else "タイトル不明"
+    desc_val = description_tag.get("content") if description_tag else "概要不明"
+
+    # beautifulsoupの型定義により、contentがリストを返す可能性があるため、文字列に変換
+    title = "".join(title_val) if isinstance(title_val, list) else str(title_val)
+    description = "".join(desc_val) if isinstance(desc_val, list) else str(desc_val)
+
+    return {
+        "title": title,
+        "description": description.strip(),
+    }
+
 def parse_articles_from_audee_page(html: str) -> list[dict]:
     """AuDeeの番組ページHTMLから記事リストを抽出します。"""
     soup = BeautifulSoup(html, "html.parser")
@@ -58,20 +77,23 @@ def generate_rss_feed(channel_info: dict, articles: list[dict]) -> str:
     
     return feed.writeString('utf-8')
 
+import xml.dom.minidom
+
 def create_audee_rss_file(url: str, output_path: str):
     """AuDeeの番組ページのRSSフィードを作成し、ファイルに保存します。"""
     html = get_html(url)
     
-    # TODO: HTMLから動的にチャンネル情報を取得する
-    channel_info = {
-        "title": "伊藤沙莉のsaireek channel",
-        "link": url,
-        "description": "俳優、伊藤沙莉によるラジオ番組「saireek channel」の非公式RSSフィードです。"
-    }
+    channel_info = parse_channel_info_from_audee_page(html)
+    channel_info["link"] = url
 
     articles = parse_articles_from_audee_page(html)
     rss_xml = generate_rss_feed(channel_info, articles)
 
-    with open(output_path, "w", encoding="utf-8") as f:
-        f.write(rss_xml)
+    # 生成されたXMLを整形する
+    dom = xml.dom.minidom.parseString(rss_xml)
+    pretty_xml = dom.toprettyxml(indent="  ")
+    # 空白行を削除
+    pretty_xml = '\n'.join([line for line in pretty_xml.split('\n') if line.strip()])
 
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write(pretty_xml)
