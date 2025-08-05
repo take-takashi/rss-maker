@@ -11,6 +11,10 @@
       "Testable Design"
     ]
   },
-  "project_description": "特定のWEBページからHTMLソースを取得し、構造を解析してRSSを作成します。また、このRSSはGithub Actionsを用いて日次で更新を行い、Github pagesでRSSを公開します。このRSSは複数サイトを扱う可能性があるため、サイトごとにRSSを分けて発行するようにする。",
+  "project_description": [
+    "特定のWEBページからHTMLソースを取得し、構造を解析してRSSを作成します。",
+    "また、このRSSはGithub Actionsを用いて日次で更新を行い、Github pagesでRSSを公開します。",
+    "このRSSは複数サイトを扱う可能性があるため、サイトごとにRSSを分けて発行するようにする。"
+  ],
   "package_manager": "uv"
 }
