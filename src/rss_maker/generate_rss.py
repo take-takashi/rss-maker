@@ -1,13 +1,17 @@
+import xml.dom.minidom
+from urllib.parse import urljoin
+
+import feedgenerator
 import requests
 from bs4 import BeautifulSoup
-import feedgenerator
-from urllib.parse import urljoin
+
 
 def get_html(url: str) -> str:
     """指定されたURLからHTMLコンテンツを取得します。"""
     response = requests.get(url)
     response.raise_for_status()  # エラーがあれば例外を発生させる
     return response.text
+
 
 def parse_channel_info_from_audee_page(html: str) -> dict:
     """AuDeeの番組ページHTMLからチャンネル情報を抽出します。"""
@@ -28,6 +32,7 @@ def parse_channel_info_from_audee_page(html: str) -> dict:
         "description": description.strip(),
     }
 
+
 def parse_articles_from_audee_page(html: str) -> list[dict]:
     """AuDeeの番組ページHTMLから記事リストを抽出します。"""
     soup = BeautifulSoup(html, "html.parser")
@@ -44,19 +49,22 @@ def parse_articles_from_audee_page(html: str) -> list[dict]:
         title_tag = item.select_one("a p.txt-article")
 
         if link_tag and img_tag and title_tag:
-            href = link_tag.get('href')
+            href = link_tag.get("href")
             if isinstance(href, str):
                 # URLはドメインからの絶対パスではない場合があるので、完全なURLに組み立てる
                 url = href
-                if not url.startswith('http'):
+                if not url.startswith("http"):
                     url = f"https://audee.jp{url}"
-                
-                articles.append({
-                    "title": title_tag.get_text(strip=True),
-                    "url": url,
-                    "thumbnail": img_tag["data-original"],
-                })
+
+                articles.append(
+                    {
+                        "title": title_tag.get_text(strip=True),
+                        "url": url,
+                        "thumbnail": img_tag["data-original"],
+                    }
+                )
     return articles
+
 
 def generate_rss_feed(channel_info: dict, articles: list[dict]) -> str:
     """チャンネル情報と記事リストからRSSフィードを生成します。"""
@@ -79,15 +87,14 @@ def generate_rss_feed(channel_info: dict, articles: list[dict]) -> str:
             description=article.get("description", ""),
             enclosures=enclosures,
         )
-    
-    return feed.writeString('utf-8')
 
-import xml.dom.minidom
+    return feed.writeString("utf-8")
+
 
 def create_audee_rss_file(url: str, output_path: str):
     """AuDeeの番組ページのRSSフィードを作成し、ファイルに保存します。"""
     html = get_html(url)
-    
+
     channel_info = parse_channel_info_from_audee_page(html)
     channel_info["link"] = url
 
@@ -98,7 +105,7 @@ def create_audee_rss_file(url: str, output_path: str):
     dom = xml.dom.minidom.parseString(rss_xml)
     pretty_xml = dom.toprettyxml(indent="  ")
     # 空白行を削除
-    pretty_xml = '\n'.join([line for line in pretty_xml.split('\n') if line.strip()])
+    pretty_xml = "\n".join([line for line in pretty_xml.split("\n") if line.strip()])
 
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(pretty_xml)
@@ -111,13 +118,16 @@ def parse_channel_info_from_bitfan_updates_page(html: str) -> dict:
 
     # タイトルと説明はogタグ or 通常のmetaから取得
     title_tag = soup.select_one("meta[property='og:title']") or soup.find("title")
-    desc_tag = (
-        soup.select_one("meta[property='og:description']")
-        or soup.select_one("meta[name='description']")
+    desc_tag = soup.select_one("meta[property='og:description']") or soup.select_one(
+        "meta[name='description']"
     )
 
     raw_title = (
-        title_tag.get("content") if title_tag and title_tag.has_attr("content") else title_tag.string if title_tag else "タイトル不明"
+        title_tag.get("content")
+        if title_tag and title_tag.has_attr("content")
+        else title_tag.string
+        if title_tag
+        else "タイトル不明"
     )
     raw_desc = (
         desc_tag.get("content") if desc_tag and desc_tag.has_attr("content") else ""
@@ -134,46 +144,52 @@ def parse_channel_info_from_bitfan_updates_page(html: str) -> dict:
 def parse_articles_from_bitfan_updates_page(html: str, base_url: str) -> list[dict]:
     """Bitfanの更新ページHTMLから記事リストを抽出します。
 
-    仕様が頻繁に変わる可能性があるため、/contents/へのリンクを基準に抽出します。
-    タイトルはアンカーのテキスト、サムネイルは同要素内のimgから取得します。
+    対象は `section.p-clubSection` 配下のみ。各アイテムは
+    `a.p-clubMedia__inner[href*="/contents/"]` を記事として扱います。
+    タイトルは `.p-clubMedia__name` のテキスト（NEW等のラベル除去）、
+    サムネイルは `.p-clubMedia__icon img[src]` を使用します。
     """
     soup = BeautifulSoup(html, "html.parser")
     articles: list[dict] = []
 
-    # 更新一覧領域を推定（クラス名やタグは変わりやすいので幅広く探索）
-    container = (
-        soup.select_one(".updates, .update, .c-updates, .l-updates, main, #main, .contents")
-        or soup
-    )
+    container = soup.select_one("section.p-clubSection")
+    if not container:
+        return []
 
-    # /contents/ へのリンクを全て拾う（Bitfanの個別記事URLパターン）
     seen = set()
-    for a in container.find_all("a", href=True):
-        href: str = a.get("href")  # type: ignore
-        if "/contents/" not in href:
+    for a in container.select("a.p-clubMedia__inner[href*='/contents/']"):
+        href = a.get("href")
+        if not href:
             continue
-        # 重複防止
         abs_url = urljoin(base_url, href)
         if abs_url in seen:
             continue
         seen.add(abs_url)
 
-        title = a.get_text(strip=True)
-        # 画像（あれば）
-        img = a.find("img")
+        # タイトル抽出（NEWラベルなどのspanは除去）
+        name_tag = a.select_one(".p-clubMedia__name")
+        title = ""
+        if name_tag:
+            for span in name_tag.find_all("span"):
+                span.decompose()
+            title = name_tag.get_text(strip=True)
+        if not title:
+            # フォールバック：アンカー全体のテキスト
+            title = a.get_text(strip=True)
+
+        # サムネイル
+        img = a.select_one(".p-clubMedia__icon img[src]") or a.find("img")
         thumb = img.get("src") if img and img.has_attr("src") else None
         if thumb:
             thumb = urljoin(base_url, thumb)
 
-        if not title:
-            # タイトルが空ならスキップ（ナビゲーションなどを除外）
-            continue
-
-        articles.append({
-            "title": title,
-            "url": abs_url,
-            "thumbnail": thumb,
-        })
+        articles.append(
+            {
+                "title": title,
+                "url": abs_url,
+                "thumbnail": thumb,
+            }
+        )
 
     return articles
 
@@ -192,7 +208,7 @@ def create_bitfan_updates_rss_file(url: str, output_path: str):
     dom = xml.dom.minidom.parseString(rss_xml)
     pretty_xml = dom.toprettyxml(indent="  ")
     # 空白行を削除
-    pretty_xml = '\n'.join([line for line in pretty_xml.split('\n') if line.strip()])
+    pretty_xml = "\n".join([line for line in pretty_xml.split("\n") if line.strip()])
 
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(pretty_xml)
