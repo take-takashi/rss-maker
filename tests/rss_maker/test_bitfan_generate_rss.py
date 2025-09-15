@@ -37,8 +37,8 @@ def test_parse_articles_from_bitfan_updates_page_scoped_to_club_section():
 def test_generate_rss_feed_from_bitfan_parsed_data():
     html = load_fixture()
     base_url = "https://ij-matome.bitfan.id/updates"
-    channel = parse_channel_info_from_bitfan_updates_page(html)
-    channel["link"] = base_url
+    base = parse_channel_info_from_bitfan_updates_page(html)
+    channel = {"title": base["title"], "description": base["description"], "link": base_url}
     articles = parse_articles_from_bitfan_updates_page(html, base_url)
 
     rss_xml = generate_rss_feed(channel, articles)
