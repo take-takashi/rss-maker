@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import feedgenerator
+from urllib.parse import urljoin
 
 def get_html(url: str) -> str:
     """指定されたURLからHTMLコンテンツを取得します。"""
@@ -66,13 +67,17 @@ def generate_rss_feed(channel_info: dict, articles: list[dict]) -> str:
     )
 
     for article in articles:
+        enclosures = []
+        thumb = article.get("thumbnail")
+        if thumb:
+            enclosures = [
+                feedgenerator.Enclosure(url=thumb, length="0", mime_type="image/jpeg"),
+            ]
         feed.add_item(
             title=article["title"],
             link=article["url"],
-            description="",  # 概要は今回利用しない
-            enclosures=[
-                feedgenerator.Enclosure(url=article["thumbnail"], length="0", mime_type="image/jpeg"),
-            ]
+            description=article.get("description", ""),
+            enclosures=enclosures,
         )
     
     return feed.writeString('utf-8')
@@ -87,6 +92,100 @@ def create_audee_rss_file(url: str, output_path: str):
     channel_info["link"] = url
 
     articles = parse_articles_from_audee_page(html)
+    rss_xml = generate_rss_feed(channel_info, articles)
+
+    # 生成されたXMLを整形する
+    dom = xml.dom.minidom.parseString(rss_xml)
+    pretty_xml = dom.toprettyxml(indent="  ")
+    # 空白行を削除
+    pretty_xml = '\n'.join([line for line in pretty_xml.split('\n') if line.strip()])
+
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write(pretty_xml)
+
+
+# ---------------- Bitfan (伊集院光のタネ まとめ聴き) ----------------
+def parse_channel_info_from_bitfan_updates_page(html: str) -> dict:
+    """Bitfanの更新ページHTMLからチャンネル情報を抽出します。"""
+    soup = BeautifulSoup(html, "html.parser")
+
+    # タイトルと説明はogタグ or 通常のmetaから取得
+    title_tag = soup.select_one("meta[property='og:title']") or soup.find("title")
+    desc_tag = (
+        soup.select_one("meta[property='og:description']")
+        or soup.select_one("meta[name='description']")
+    )
+
+    raw_title = (
+        title_tag.get("content") if title_tag and title_tag.has_attr("content") else title_tag.string if title_tag else "タイトル不明"
+    )
+    raw_desc = (
+        desc_tag.get("content") if desc_tag and desc_tag.has_attr("content") else ""
+    )
+    title = "".join(raw_title) if isinstance(raw_title, list) else str(raw_title)
+    description = "".join(raw_desc) if isinstance(raw_desc, list) else str(raw_desc)
+
+    return {
+        "title": title.strip() if title else "タイトル不明",
+        "description": description.strip(),
+    }
+
+
+def parse_articles_from_bitfan_updates_page(html: str, base_url: str) -> list[dict]:
+    """Bitfanの更新ページHTMLから記事リストを抽出します。
+
+    仕様が頻繁に変わる可能性があるため、/contents/へのリンクを基準に抽出します。
+    タイトルはアンカーのテキスト、サムネイルは同要素内のimgから取得します。
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    articles: list[dict] = []
+
+    # 更新一覧領域を推定（クラス名やタグは変わりやすいので幅広く探索）
+    container = (
+        soup.select_one(".updates, .update, .c-updates, .l-updates, main, #main, .contents")
+        or soup
+    )
+
+    # /contents/ へのリンクを全て拾う（Bitfanの個別記事URLパターン）
+    seen = set()
+    for a in container.find_all("a", href=True):
+        href: str = a.get("href")  # type: ignore
+        if "/contents/" not in href:
+            continue
+        # 重複防止
+        abs_url = urljoin(base_url, href)
+        if abs_url in seen:
+            continue
+        seen.add(abs_url)
+
+        title = a.get_text(strip=True)
+        # 画像（あれば）
+        img = a.find("img")
+        thumb = img.get("src") if img and img.has_attr("src") else None
+        if thumb:
+            thumb = urljoin(base_url, thumb)
+
+        if not title:
+            # タイトルが空ならスキップ（ナビゲーションなどを除外）
+            continue
+
+        articles.append({
+            "title": title,
+            "url": abs_url,
+            "thumbnail": thumb,
+        })
+
+    return articles
+
+
+def create_bitfan_updates_rss_file(url: str, output_path: str):
+    """Bitfanの更新ページからRSSフィードを作成し、ファイルに保存します。"""
+    html = get_html(url)
+
+    channel_info = parse_channel_info_from_bitfan_updates_page(html)
+    channel_info["link"] = url
+
+    articles = parse_articles_from_bitfan_updates_page(html, base_url=url)
     rss_xml = generate_rss_feed(channel_info, articles)
 
     # 生成されたXMLを整形する
