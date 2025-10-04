@@ -4,7 +4,13 @@
     <title>伊集院光のタネ まとめ聴き</title>
     <link>https://ij-matome.bitfan.id/updates</link>
     <description>ニッポン放送で放送している伊集院光のラジオ番組『伊集院光のちょいタネ』と『伊集院光のタネ』の過去の放送が聴けるアーカイブサービス。</description>
-    <lastBuildDate>Fri, 03 Oct 2025 01:07:40 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Oct 2025 01:05:02 +0000</lastBuildDate>
+    <item>
+      <title>アフタートーク第185回『前島花音の枝葉』</title>
+      <link>https://ij-matome.bitfan.id/contents/307068</link>
+      <description/>
+      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/bbd9750165189db5c47a76eff10f8cdd.jpg"/>
+    </item>
     <item>
       <title>アフタートーク第184回『自由律俳句再鑑賞会』</title>
       <link>https://ij-matome.bitfan.id/contents/305649</link>
@@ -70,12 +76,6 @@
       <link>https://ij-matome.bitfan.id/contents/301866</link>
       <description/>
       <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/29d788dba05c60528a948f8ec28b6efa.jpg"/>
-    </item>
-    <item>
-      <title>第369回～第373回 2025年9月15日～9月19日放送『113.レコードの記憶』</title>
-      <link>https://ij-matome.bitfan.id/contents/301865</link>
-      <description/>
-      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/cee9f966392aca5024aecdd3c150eb9e.jpg"/>
     </item>
   </channel>
 </rss>
