@@ -4,7 +4,13 @@
     <title>伊集院光のタネ まとめ聴き</title>
     <link>https://ij-matome.bitfan.id/updates</link>
     <description>ニッポン放送で放送している伊集院光のラジオ番組『伊集院光のちょいタネ』と『伊集院光のタネ』の過去の放送が聴けるアーカイブサービス。</description>
-    <lastBuildDate>Sat, 18 Oct 2025 01:07:04 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 19 Oct 2025 01:18:48 +0000</lastBuildDate>
+    <item>
+      <title>アフタートーク第191回『安田美香の枝葉』</title>
+      <link>https://ij-matome.bitfan.id/contents/312702</link>
+      <description/>
+      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/dbcf916195468dfbac96f2dda122fc11.jpg"/>
+    </item>
     <item>
       <title>アフタートーク第190回『好みのお好み焼きはこれだ～おかわり編～』</title>
       <link>https://ij-matome.bitfan.id/contents/312295</link>
@@ -70,12 +76,6 @@
       <link>https://ij-matome.bitfan.id/contents/307444</link>
       <description/>
       <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/73c54ca226ecfce875822a66408ad180.jpg"/>
-    </item>
-    <item>
-      <title>第413回～第416回 2025年9月30日～10月3日放送『74.病院おもしろエピソード』『10.果物大好き』『39.野球初心者の野球ネタ』『100.双子・三つ子・四つ子の話』</title>
-      <link>https://ij-matome.bitfan.id/contents/307065</link>
-      <description/>
-      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/2a0295cfaeca7f40cb3288c46fa3667b.jpg"/>
     </item>
   </channel>
 </rss>
