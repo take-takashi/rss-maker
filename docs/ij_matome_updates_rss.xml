@@ -4,7 +4,13 @@
     <title>伊集院光のタネ まとめ聴き</title>
     <link>https://ij-matome.bitfan.id/updates</link>
     <description>ニッポン放送で放送している伊集院光のラジオ番組『伊集院光のちょいタネ』と『伊集院光のタネ』の過去の放送が聴けるアーカイブサービス。</description>
-    <lastBuildDate>Sat, 25 Oct 2025 01:09:48 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 26 Oct 2025 01:16:45 +0000</lastBuildDate>
+    <item>
+      <title>アフタートーク第194回『一番好きなご飯のおとも～おかわり編～』</title>
+      <link>https://ij-matome.bitfan.id/contents/314915</link>
+      <description/>
+      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/7d66f4fde81f4c2c9b1791964fa6b619.jpg"/>
+    </item>
     <item>
       <title>アフタートーク第193回『前島花音の枝葉』</title>
       <link>https://ij-matome.bitfan.id/contents/313973</link>
@@ -70,12 +76,6 @@
       <link>https://ij-matome.bitfan.id/contents/311651</link>
       <description/>
       <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/afe8a6cc2c8c3e99a0ab1a876c8e3900.jpg"/>
-    </item>
-    <item>
-      <title>第417回～第420回 2025年10月7日～10月10日放送『36.昭和あるある令和ないない』『119.好みのお好み焼きはこれだ』『86.落ち込んだ時の復活方法』『119.好みのお好み焼きはこれだ』</title>
-      <link>https://ij-matome.bitfan.id/contents/310296</link>
-      <description/>
-      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/1372e508d160c6ca2f6ac5afc1a9751d.jpg"/>
     </item>
   </channel>
 </rss>
