@@ -4,7 +4,13 @@
     <title>伊集院光のタネ まとめ聴き</title>
     <link>https://ij-matome.bitfan.id/updates</link>
     <description>ニッポン放送で放送している伊集院光のラジオ番組『伊集院光のちょいタネ』と『伊集院光のタネ』の過去の放送が聴けるアーカイブサービス。</description>
-    <lastBuildDate>Wed, 05 Nov 2025 01:14:53 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 06 Nov 2025 01:14:38 +0000</lastBuildDate>
+    <item>
+      <title>アフタートーク第197回『箱崎みどりの枝葉』</title>
+      <link>https://ij-matome.bitfan.id/contents/318596</link>
+      <description/>
+      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/a69c6a1db334ca371798a6fea2a97aca.jpg"/>
+    </item>
     <item>
       <title>第428回～第431回 2025年10月28日～10月31日放送『09.あるバイトのエピソード』『55.虫好き！』『131.冷めた覚めた』『157.格言・名言・金言』</title>
       <link>https://ij-matome.bitfan.id/contents/315452</link>
@@ -70,12 +76,6 @@
       <link>https://ij-matome.bitfan.id/contents/314762</link>
       <description/>
       <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/b6b64aa9aae83e6d699785188fc4d778.jpg"/>
-    </item>
-    <item>
-      <title>第426回 2025年10月22日放送『34.今迷ってること』</title>
-      <link>https://ij-matome.bitfan.id/contents/314761</link>
-      <description/>
-      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/dc3a81e72090b8e9864b39115a5d453d.jpg"/>
     </item>
   </channel>
 </rss>
