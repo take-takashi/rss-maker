@@ -4,7 +4,13 @@
     <title>伊集院光のタネ まとめ聴き</title>
     <link>https://ij-matome.bitfan.id/updates</link>
     <description>ニッポン放送で放送している伊集院光のラジオ番組『伊集院光のちょいタネ』と『伊集院光のタネ』の過去の放送が聴けるアーカイブサービス。</description>
-    <lastBuildDate>Mon, 17 Nov 2025 01:15:30 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 18 Nov 2025 01:14:24 +0000</lastBuildDate>
+    <item>
+      <title>アフタートーク第201回『竹内香苗の枝葉』</title>
+      <link>https://ij-matome.bitfan.id/contents/321020</link>
+      <description/>
+      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/f3140b7961b093b7910e7676ded11aad.jpg"/>
+    </item>
     <item>
       <title>第436回～第439回 2025年11月11日～11月14日放送『04.ワンニャンカメ他ペットの話』『42.大人びた子供の発言』『29.最近のご近所の話題』『50.最新サービスあれこれ』</title>
       <link>https://ij-matome.bitfan.id/contents/321051</link>
@@ -70,12 +76,6 @@
       <link>https://ij-matome.bitfan.id/contents/318615</link>
       <description/>
       <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/9cf78ff212e6c4f952962a944dd4d6ec.jpg"/>
-    </item>
-    <item>
-      <title>第434回 2025年11月6日放送『166.サブスク入ってます』</title>
-      <link>https://ij-matome.bitfan.id/contents/318614</link>
-      <description/>
-      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/c8efcd3aa08d3b3b24cde658e9089b90.jpg"/>
     </item>
   </channel>
 </rss>
