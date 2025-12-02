@@ -4,7 +4,13 @@
     <title>伊集院光のタネ まとめ聴き</title>
     <link>https://ij-matome.bitfan.id/updates</link>
     <description>ニッポン放送で放送している伊集院光のラジオ番組『伊集院光のちょいタネ』と『伊集院光のタネ』の過去の放送が聴けるアーカイブサービス。</description>
-    <lastBuildDate>Mon, 01 Dec 2025 01:28:06 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 02 Dec 2025 01:16:20 +0000</lastBuildDate>
+    <item>
+      <title>アフタートーク第206回『前島花音の枝葉』</title>
+      <link>https://ij-matome.bitfan.id/contents/327083</link>
+      <description/>
+      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/e93f6046bc9e7af1035df9e27607e2ca.jpg"/>
+    </item>
     <item>
       <title>第444回～第447回 2025年11月25日～11月28日放送『84.あの匂い、この匂い』『160.業界用語あれこれ』『38.スグレモノみつけました』『51.うまい鍋』</title>
       <link>https://ij-matome.bitfan.id/contents/325149</link>
@@ -70,12 +76,6 @@
       <link>https://ij-matome.bitfan.id/contents/323255</link>
       <description/>
       <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/c744e28082880b0df687d3111f31c80d.jpg"/>
-    </item>
-    <item>
-      <title>第443回 2025年11月21日放送『126.こんな夢を見た』</title>
-      <link>https://ij-matome.bitfan.id/contents/323253</link>
-      <description/>
-      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/f0d67400454b6ca84273feb97cd0549b.jpg"/>
     </item>
   </channel>
 </rss>
