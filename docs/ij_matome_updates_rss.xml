@@ -4,7 +4,13 @@
     <title>伊集院光のタネ まとめ聴き</title>
     <link>https://ij-matome.bitfan.id/updates</link>
     <description>ニッポン放送で放送している伊集院光のラジオ番組『伊集院光のちょいタネ』と『伊集院光のタネ』の過去の放送が聴けるアーカイブサービス。</description>
-    <lastBuildDate>Wed, 10 Dec 2025 01:18:20 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 11 Dec 2025 01:19:10 +0000</lastBuildDate>
+    <item>
+      <title>アフタートーク第209回『くいしん坊！パンザイ～おかわり編～』</title>
+      <link>https://ij-matome.bitfan.id/contents/330109</link>
+      <description/>
+      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/95f3a5736e5be96b47c38f9d7cfcaf2a.jpg"/>
+    </item>
     <item>
       <title>第448回～第451回 2025年12月2日～12月5日放送『03.鳥と私と』『78.おっちょこちょい伝説』『69.試験・受験の話』『20.捨てられないもの捨てました。』</title>
       <link>https://ij-matome.bitfan.id/contents/328130</link>
@@ -70,12 +76,6 @@
       <link>https://ij-matome.bitfan.id/contents/325146</link>
       <description/>
       <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/5aadd20242824ef3d4df2c6f9e602931.jpg"/>
-    </item>
-    <item>
-      <title>第447回 2025年11月28日放送『51.うまい鍋』</title>
-      <link>https://ij-matome.bitfan.id/contents/325144</link>
-      <description/>
-      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/8641080a1aec0a57e264b0184e6048de.jpg"/>
     </item>
   </channel>
 </rss>
