@@ -4,7 +4,13 @@
     <title>伊集院光のタネ まとめ聴き</title>
     <link>https://ij-matome.bitfan.id/updates</link>
     <description>ニッポン放送で放送している伊集院光のラジオ番組『伊集院光のちょいタネ』と『伊集院光のタネ』の過去の放送が聴けるアーカイブサービス。</description>
-    <lastBuildDate>Sat, 20 Dec 2025 01:15:08 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 21 Dec 2025 01:23:57 +0000</lastBuildDate>
+    <item>
+      <title>アフタートーク第211回『新行市佳の枝葉』</title>
+      <link>https://ij-matome.bitfan.id/contents/332118</link>
+      <description/>
+      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/e4763a1e7b29d746ba26c92d194c4c74.jpg"/>
+    </item>
     <item>
       <title>アフタートーク第210回『安田美香と前島花音の枝葉』</title>
       <link>https://ij-matome.bitfan.id/contents/332103</link>
@@ -70,12 +76,6 @@
       <link>https://ij-matome.bitfan.id/contents/328127</link>
       <description/>
       <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/8e8c729348d80b95a524e44c7a553e0e.jpg"/>
-    </item>
-    <item>
-      <title>第450回 2025年12月4日放送『69.試験・受験の話』</title>
-      <link>https://ij-matome.bitfan.id/contents/328126</link>
-      <description/>
-      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/294fc0c7edd705614eb1790eb9b82eb2.jpg"/>
     </item>
   </channel>
 </rss>
