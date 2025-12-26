@@ -4,7 +4,19 @@
     <title>伊集院光のタネ まとめ聴き</title>
     <link>https://ij-matome.bitfan.id/updates</link>
     <description>ニッポン放送で放送している伊集院光のラジオ番組『伊集院光のちょいタネ』と『伊集院光のタネ』の過去の放送が聴けるアーカイブサービス。</description>
-    <lastBuildDate>Thu, 25 Dec 2025 01:18:50 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 26 Dec 2025 01:19:09 +0000</lastBuildDate>
+    <item>
+      <title>「伊集院光のタネ」傑作選　PART2</title>
+      <link>https://ij-matome.bitfan.id/contents/334653</link>
+      <description/>
+      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/66ee697f6aab422452f9ccec065d2317.jpg"/>
+    </item>
+    <item>
+      <title>「伊集院光のタネ」傑作選　PART1</title>
+      <link>https://ij-matome.bitfan.id/contents/334644</link>
+      <description/>
+      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/4ecadeefc7aa425e06beb5d43db18824.jpg"/>
+    </item>
     <item>
       <title>アフタートーク第212回『2025年タネデミー賞～延長戦～』</title>
       <link>https://ij-matome.bitfan.id/contents/332129</link>
@@ -64,18 +76,6 @@
       <link>https://ij-matome.bitfan.id/contents/330345</link>
       <description/>
       <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/91acd961fbac0f026723e1ccf5e9bb72.jpg"/>
-    </item>
-    <item>
-      <title>第429回～第433回 2025年12月8日～12月12日放送『128.タネデミー賞』</title>
-      <link>https://ij-matome.bitfan.id/contents/330341</link>
-      <description/>
-      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/0eb06c55657e2004f4a62e5a153ed575.jpg"/>
-    </item>
-    <item>
-      <title>第455回 2025年12月12日放送『128.タネデミー賞』</title>
-      <link>https://ij-matome.bitfan.id/contents/330340</link>
-      <description/>
-      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/9934587ebc11ef3d5e3ba8a37254ac4c.jpg"/>
     </item>
   </channel>
 </rss>
