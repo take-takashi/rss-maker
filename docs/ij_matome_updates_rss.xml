@@ -4,7 +4,13 @@
     <title>伊集院光のタネ まとめ聴き</title>
     <link>https://ij-matome.bitfan.id/updates</link>
     <description>ニッポン放送で放送している伊集院光のラジオ番組『伊集院光のちょいタネ』と『伊集院光のタネ』の過去の放送が聴けるアーカイブサービス。</description>
-    <lastBuildDate>Wed, 07 Jan 2026 01:21:15 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 08 Jan 2026 01:21:48 +0000</lastBuildDate>
+    <item>
+      <title>アフタートーク第215回『竹内香苗の枝葉』</title>
+      <link>https://ij-matome.bitfan.id/contents/339535</link>
+      <description/>
+      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/a6b5ebdce2dee6f907d8519795fe6670.jpg"/>
+    </item>
     <item>
       <title>アフタートーク第214回『新行市佳の枝葉』</title>
       <link>https://ij-matome.bitfan.id/contents/339143</link>
@@ -70,12 +76,6 @@
       <link>https://ij-matome.bitfan.id/contents/336305</link>
       <description/>
       <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/e9f7d03581fc219182baeba71b9798f3.jpg"/>
-    </item>
-    <item>
-      <title>第460回 2025年12月23日放送『106.徳積んだ！』</title>
-      <link>https://ij-matome.bitfan.id/contents/336304</link>
-      <description/>
-      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/072a13d35210cda235d1e17fc3844100.jpg"/>
     </item>
   </channel>
 </rss>
