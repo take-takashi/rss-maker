@@ -4,7 +4,13 @@
     <title>伊集院光のタネ まとめ聴き</title>
     <link>https://ij-matome.bitfan.id/updates</link>
     <description>ニッポン放送で放送している伊集院光のラジオ番組『伊集院光のちょいタネ』と『伊集院光のタネ』の過去の放送が聴けるアーカイブサービス。</description>
-    <lastBuildDate>Wed, 21 Jan 2026 01:23:49 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 22 Jan 2026 01:23:38 +0000</lastBuildDate>
+    <item>
+      <title>アフタートーク第220回『自由律俳句再鑑賞会』</title>
+      <link>https://ij-matome.bitfan.id/contents/343764</link>
+      <description/>
+      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/a9d03759bd6c811b2862f0858d5f48fa.jpg"/>
+    </item>
     <item>
       <title>アフタートーク第219回『自由律俳句再鑑賞会』</title>
       <link>https://ij-matome.bitfan.id/contents/343755</link>
@@ -70,12 +76,6 @@
       <link>https://ij-matome.bitfan.id/contents/339857</link>
       <description/>
       <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/5e01dccc829ce0bf50116d67f477d815.jpg"/>
-    </item>
-    <item>
-      <title>第470回 2026年1月9日放送『66.12月31日、1月1日、1月2日のできごと（年末年始のできごと）』『67.早くも決まってる2026年の予定』『140.お正月あれこれ』</title>
-      <link>https://ij-matome.bitfan.id/contents/339856</link>
-      <description/>
-      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/e12d6712abe31ea55e85714fde1c8870.jpg"/>
     </item>
   </channel>
 </rss>
