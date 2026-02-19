@@ -4,7 +4,13 @@
     <title>伊集院光のタネ まとめ聴き</title>
     <link>https://ij-matome.bitfan.id/updates</link>
     <description>ニッポン放送で放送している伊集院光のラジオ番組『伊集院光のちょいタネ』と『伊集院光のタネ』の過去の放送が聴けるアーカイブサービス。</description>
-    <lastBuildDate>Wed, 18 Feb 2026 01:52:43 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Feb 2026 01:51:26 +0000</lastBuildDate>
+    <item>
+      <title>アフタートーク第228回『前島花音の枝葉』</title>
+      <link>https://ij-matome.bitfan.id/contents/353001</link>
+      <description/>
+      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/b3aecf8aa3db7392f079fb4ab5ec0574.jpg"/>
+    </item>
     <item>
       <title>第487回～第490回 2026年2月10日～2026年2月13日放送『115.初めての伊集院光』『77.結婚式の話』『26.旅行の目的は？』『168.釣り大好き！』</title>
       <link>https://ij-matome.bitfan.id/contents/352116</link>
@@ -70,12 +76,6 @@
       <link>https://ij-matome.bitfan.id/contents/349895</link>
       <description/>
       <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/8eeab04d18860f889a054280d8c36950.jpg"/>
-    </item>
-    <item>
-      <title>第486回 2026年2月6日放送『76.俺だけ？高視聴率』</title>
-      <link>https://ij-matome.bitfan.id/contents/349891</link>
-      <description/>
-      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/e5cf9bc671f5ac68c3a80894c443b121.jpg"/>
     </item>
   </channel>
 </rss>
