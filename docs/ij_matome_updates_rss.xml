@@ -4,7 +4,13 @@
     <title>伊集院光のタネ まとめ聴き</title>
     <link>https://ij-matome.bitfan.id/updates</link>
     <description>ニッポン放送で放送している伊集院光のラジオ番組『伊集院光のちょいタネ』と『伊集院光のタネ』の過去の放送が聴けるアーカイブサービス。</description>
-    <lastBuildDate>Thu, 05 Mar 2026 01:47:32 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Mar 2026 01:49:13 +0000</lastBuildDate>
+    <item>
+      <title>アフタートーク第233回『新行市佳の枝葉』</title>
+      <link>https://ij-matome.bitfan.id/contents/358969</link>
+      <description/>
+      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/47648f589f5bb9610eb5e966a73e783c.jpg"/>
+    </item>
     <item>
       <title>アフタートーク第232回『箱崎みどりの枝葉』</title>
       <link>https://ij-matome.bitfan.id/contents/356719</link>
@@ -70,12 +76,6 @@
       <link>https://ij-matome.bitfan.id/contents/354767</link>
       <description/>
       <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/82b7282f5815a39472460bf1a046425e.jpg"/>
-    </item>
-    <item>
-      <title>第494回 2026年2月20日放送『150.ナイトルーティン』</title>
-      <link>https://ij-matome.bitfan.id/contents/354757</link>
-      <description/>
-      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/80c0c7ef90d570f84ee39d3e44f04ecb.jpg"/>
     </item>
   </channel>
 </rss>
