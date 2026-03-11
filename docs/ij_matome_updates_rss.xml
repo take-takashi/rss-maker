@@ -4,7 +4,13 @@
     <title>伊集院光のタネ まとめ聴き</title>
     <link>https://ij-matome.bitfan.id/updates</link>
     <description>ニッポン放送で放送している伊集院光のラジオ番組『伊集院光のちょいタネ』と『伊集院光のタネ』の過去の放送が聴けるアーカイブサービス。</description>
-    <lastBuildDate>Tue, 10 Mar 2026 01:42:54 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Mar 2026 01:43:02 +0000</lastBuildDate>
+    <item>
+      <title>アフタートーク第234回『棚橋麻衣の枝葉』</title>
+      <link>https://ij-matome.bitfan.id/contents/361714</link>
+      <description/>
+      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/327697d1dac06798f5784d7649d57c2d.jpg"/>
+    </item>
     <item>
       <title>第499回～第502回 2026年3月3日～2026年3月6日放送『98.親や祖父母が何回もする話』『136.舞台に立ちました』『40.内容以外の映画の話』『148.閉じ込められた経験』</title>
       <link>https://ij-matome.bitfan.id/contents/360465</link>
@@ -70,12 +76,6 @@
       <link>https://ij-matome.bitfan.id/contents/356885</link>
       <description/>
       <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/bf7de12af5d1b1e078217d466bbb8d5d.jpg"/>
-    </item>
-    <item>
-      <title>第497回 2026年2月26日放送『22.今でも後悔していること』</title>
-      <link>https://ij-matome.bitfan.id/contents/356884</link>
-      <description/>
-      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/443bce0a864fc72b2e983d319f75014f.jpg"/>
     </item>
   </channel>
 </rss>
