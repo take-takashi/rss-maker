@@ -3,10 +3,14 @@ import requests
 from pathlib import Path
 import xml.etree.ElementTree as ET
 from rss_maker.generate_rss import (
+    _guess_mime_type,
+    create_audee_rss_file,
+    create_jfn_pods_rss_file,
+    generate_rss_feed,
     get_html,
     parse_articles_from_audee_page,
-    generate_rss_feed,
-    create_audee_rss_file,
+    parse_articles_from_jfn_pods_page,
+    parse_channel_info_from_jfn_pods_page,
 )
 
 
@@ -14,6 +18,12 @@ from rss_maker.generate_rss import (
 @pytest.fixture
 def audee_page_html():
     path = Path(__file__).parent.parent / "fixtures" / "audee_program_page.html"
+    return path.read_text(encoding="utf-8")
+
+
+@pytest.fixture
+def jfn_pods_page_html():
+    path = Path(__file__).parent.parent / "fixtures" / "jfn_pods_voice_page.html"
     return path.read_text(encoding="utf-8")
 
 
@@ -35,7 +45,7 @@ def test_get_html_successfully(mocker):
     actual_html = get_html(target_url)
 
     # --- Assert ---
-    mock_get.assert_called_once_with(target_url)
+    mock_get.assert_called_once_with(target_url, timeout=(5, 20))
     assert actual_html == expected_html
 
 
@@ -56,7 +66,7 @@ def test_get_html_raises_http_error(mocker):
     with pytest.raises(requests.exceptions.HTTPError):
         get_html(target_url)
 
-    mock_get.assert_called_once_with(target_url)
+    mock_get.assert_called_once_with(target_url, timeout=(5, 20))
 
 
 def test_parse_articles_from_audee_page(audee_page_html):
@@ -127,6 +137,12 @@ def test_generate_rss_feed():
     enclosure = first_item.find("enclosure")
     assert enclosure is not None
     assert enclosure.attrib["url"] == articles[0]["thumbnail"]
+    assert enclosure.attrib["type"] == "image/jpeg"
+
+
+def test_guess_mime_type_from_url():
+    assert _guess_mime_type("https://example.com/thumb.png?min=330") == "image/png"
+    assert _guess_mime_type("https://example.com/thumb.jpg") == "image/jpeg"
 
 
 def test_create_audee_rss_file(mocker, audee_page_html):
@@ -161,3 +177,90 @@ def test_create_audee_rss_file(mocker, audee_page_html):
         title_element.text == "伊藤沙莉のsaireek channel|伊藤沙莉|AuDee（オーディー）"
     )
     assert len(channel.findall("item")) == 9
+
+
+def test_parse_channel_info_from_jfn_pods_page(jfn_pods_page_html):
+    channel_info = parse_channel_info_from_jfn_pods_page(jfn_pods_page_html)
+
+    assert channel_info["title"] == "伊藤沙莉のsaireek channel - ポッドキャスト｜JFN Pods"
+    assert channel_info["description"] == "伊藤沙莉のsaireek channelのポッドキャスト一覧です。"
+
+
+def test_parse_articles_from_jfn_pods_page(jfn_pods_page_html):
+    articles = parse_articles_from_jfn_pods_page(
+        jfn_pods_page_html, "https://jfn-pods.com/program/40889/voice"
+    )
+
+    assert len(articles) == 3
+    first_article = articles[0]
+    assert first_article["title"] == "実家帰省中に！サイコロトーク！vol.212"
+    assert first_article["url"] == "https://jfn-pods.com/program/40889/voice/Odgwkb1lar"
+    assert (
+        first_article["thumbnail"]
+        == "https://jfn-pods.com/image/pC5LLjlnGTdO6c4TA_sSNLqgTqkSnWGq.png?min=330"
+    )
+
+
+def test_create_jfn_pods_rss_file(mocker, jfn_pods_page_html):
+    target_url = "https://jfn-pods.com/program/40889/voice"
+    output_path = "/tmp/test_jfn_pods_feed.xml"
+
+    mocker.patch("rss_maker.generate_rss.get_html", return_value=jfn_pods_page_html)
+    mock_open = mocker.patch("builtins.open", mocker.mock_open())
+
+    create_jfn_pods_rss_file(target_url, output_path)
+
+    mock_open.assert_called_once_with(output_path, "w", encoding="utf-8")
+
+    written_content = mock_open().write.call_args[0][0]
+    root = ET.fromstring(written_content)
+    channel = root.find("channel")
+    assert channel is not None
+
+    title_element = channel.find("title")
+    assert title_element is not None
+    assert title_element.text == "伊藤沙莉のsaireek channel - ポッドキャスト｜JFN Pods"
+    assert len(channel.findall("item")) == 3
+
+
+def test_create_jfn_pods_rss_file_raises_when_articles_not_found(mocker):
+    target_url = "https://jfn-pods.com/program/40889/voice"
+    html = """
+    <html>
+      <head>
+        <meta property="og:title" content="伊藤沙莉のsaireek channel - ポッドキャスト｜JFN Pods" />
+        <meta name="description" content="伊藤沙莉のsaireek channelのポッドキャスト一覧です。" />
+      </head>
+      <body><main></main></body>
+    </html>
+    """
+
+    mocker.patch("rss_maker.generate_rss.get_html", return_value=html)
+
+    with pytest.raises(ValueError, match="記事を抽出できませんでした"):
+        create_jfn_pods_rss_file(target_url, "/tmp/test_jfn_pods_feed.xml")
+
+
+def test_create_jfn_pods_rss_file_raises_when_channel_meta_is_empty(mocker):
+    target_url = "https://jfn-pods.com/program/40889/voice"
+    html = """
+    <html>
+      <head>
+        <meta property="og:title" content="" />
+        <meta name="description" content=" " />
+      </head>
+      <body>
+        <article>
+          <a href="/program/40889/voice/Odgwkb1lar">
+            <img src="/image/example.png" alt="example" />
+            <h3>実家帰省中に！サイコロトーク！vol.212</h3>
+          </a>
+        </article>
+      </body>
+    </html>
+    """
+
+    mocker.patch("rss_maker.generate_rss.get_html", return_value=html)
+
+    with pytest.raises(ValueError, match="タイトルを抽出できませんでした"):
+        create_jfn_pods_rss_file(target_url, "/tmp/test_jfn_pods_feed.xml")

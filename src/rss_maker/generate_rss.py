@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import mimetypes
 import xml.dom.minidom
 from typing import List, Mapping, NotRequired, Optional, Required, Sequence, TypedDict
 from urllib.parse import urljoin
@@ -37,9 +38,20 @@ def _attr_to_str(val: object) -> Optional[str]:
 
 def get_html(url: str) -> str:
     """指定されたURLからHTMLコンテンツを取得します。"""
-    response = requests.get(url)
+    response = requests.get(url, timeout=(5, 20))
     response.raise_for_status()  # エラーがあれば例外を発生させる
     return response.text
+
+
+def _guess_mime_type(url: str) -> str:
+    """URLからRSS enclosure用のMIME typeを推定する。"""
+    mime_type, _ = mimetypes.guess_type(url)
+    return mime_type or "application/octet-stream"
+
+
+def _is_missing_text(value: str, fallback: str) -> bool:
+    normalized = value.strip()
+    return not normalized or normalized == fallback or normalized == "None"
 
 
 def parse_channel_info_from_audee_page(html: str) -> ChannelInfoBase:
@@ -115,7 +127,9 @@ def generate_rss_feed(
         thumb = str(thumb_obj) if isinstance(thumb_obj, str) else None
         if thumb:
             enclosures = [
-                feedgenerator.Enclosure(url=thumb, length="0", mime_type="image/jpeg")
+                feedgenerator.Enclosure(
+                    url=thumb, length="0", mime_type=_guess_mime_type(thumb)
+                )
             ]
         item_title = str(article["title"])  # type: ignore[index]
         item_link = str(article["url"])  # type: ignore[index]
@@ -149,6 +163,89 @@ def create_audee_rss_file(url: str, output_path: str) -> None:
     dom = xml.dom.minidom.parseString(rss_xml)
     pretty_xml = dom.toprettyxml(indent="  ")
     # 空白行を削除
+    pretty_xml = "\n".join([line for line in pretty_xml.split("\n") if line.strip()])
+
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write(pretty_xml)
+
+
+def parse_channel_info_from_jfn_pods_page(html: str) -> ChannelInfoBase:
+    """JFN Podsのポッドキャスト一覧ページHTMLからチャンネル情報を抽出します。"""
+    soup = BeautifulSoup(html, "html.parser")
+
+    title_tag = soup.select_one("meta[property='og:title']")
+    description_tag = soup.select_one("meta[name='description']")
+
+    title_val = title_tag.get("content") if title_tag else "タイトル不明"
+    desc_val = description_tag.get("content") if description_tag else "概要不明"
+
+    title = "".join(title_val) if isinstance(title_val, list) else str(title_val)
+    description = "".join(desc_val) if isinstance(desc_val, list) else str(desc_val)
+
+    return {
+        "title": title.strip(),
+        "description": description.strip(),
+    }
+
+
+def parse_articles_from_jfn_pods_page(html: str, base_url: str) -> List[Article]:
+    """JFN Podsのポッドキャスト一覧ページHTMLから記事リストを抽出します。"""
+    soup = BeautifulSoup(html, "html.parser")
+    articles: List[Article] = []
+    seen: set[str] = set()
+
+    for link_tag in soup.select("article a[href*='/voice/']"):
+        if not isinstance(link_tag, Tag):
+            continue
+
+        href = _attr_to_str(link_tag.get("href"))
+        if not href:
+            continue
+
+        url = urljoin(base_url, href)
+        if url in seen:
+            continue
+        seen.add(url)
+
+        title_tag = link_tag.select_one("h3")
+        img_tag = link_tag.select_one("img")
+        if not (isinstance(title_tag, Tag) and isinstance(img_tag, Tag)):
+            continue
+
+        title = title_tag.get_text(strip=True)
+        thumb_src = _attr_to_str(img_tag.get("src"))
+        if not (title and thumb_src):
+            continue
+
+        thumbnail = urljoin(base_url, thumb_src)
+        art: Article = {"title": title, "url": url, "thumbnail": thumbnail}
+        articles.append(art)
+
+    return articles
+
+
+def create_jfn_pods_rss_file(url: str, output_path: str) -> None:
+    """JFN Podsのポッドキャスト一覧ページからRSSフィードを作成し、保存します。"""
+    html = get_html(url)
+
+    base_info = parse_channel_info_from_jfn_pods_page(html)
+    channel_info: ChannelInfo = {
+        "title": base_info["title"],
+        "description": base_info["description"],
+        "link": url,
+    }
+    if _is_missing_text(channel_info["title"], "タイトル不明"):
+        raise ValueError(f"JFN Podsのタイトルを抽出できませんでした: {url}")
+    if _is_missing_text(channel_info["description"], "概要不明"):
+        raise ValueError(f"JFN Podsの概要を抽出できませんでした: {url}")
+
+    articles = parse_articles_from_jfn_pods_page(html, base_url=url)
+    if not articles:
+        raise ValueError(f"JFN Podsの記事を抽出できませんでした: {url}")
+    rss_xml = generate_rss_feed(channel_info, articles)
+
+    dom = xml.dom.minidom.parseString(rss_xml)
+    pretty_xml = dom.toprettyxml(indent="  ")
     pretty_xml = "\n".join([line for line in pretty_xml.split("\n") if line.strip()])
 
     with open(output_path, "w", encoding="utf-8") as f:
