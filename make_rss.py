@@ -2,16 +2,17 @@ import sys
 import traceback
 
 from src.rss_maker.generate_rss import (
-    create_audee_rss_file,
     create_bitfan_updates_rss_file,
     create_jfn_pods_rss_file,
 )
 
 # --- 設定 ---
-# ここにRSSフィードを作成したいAuDeeの番組ページのURLを入力してください
-# 例1: 伊藤沙莉のsaireek channel（AuDee）
-audee_url = "https://audee.jp/program/show/40889"
-audee_output_path = "docs/audee_rss.xml"
+# AuDee は移転予定のため更新停止。
+# 既存の docs/audee_rss.xml は公開互換性のため残し、
+# 生成処理を再開したい場合は以下を戻す。
+# from src.rss_maker.generate_rss import create_audee_rss_file
+# audee_url = "https://audee.jp/program/show/40889"
+# audee_output_path = "docs/audee_rss.xml"
 
 # 例2: 伊集院光のタネ まとめ聴き（Bitfan）UPDATEページ
 bitfan_updates_url = "https://ij-matome.bitfan.id/updates"
@@ -25,17 +26,18 @@ jfn_pods_output_path = "docs/jfn_pods_voice_rss.xml"
 if __name__ == "__main__":
     has_error = False
 
-    # AuDee: saireek channel
-    print("AuDee番組ページのRSSフィードを作成します。")
-    print(f"URL: {audee_url}")
-    print(f"出力先: {audee_output_path}")
-    try:
-        create_audee_rss_file(audee_url, audee_output_path)
-        print("✅ AuDee RSSフィードの作成が完了しました。")
-    except Exception as e:
-        has_error = True
-        print(f"AuDee RSS作成中にエラーが発生しました: {e}")
-        traceback.print_exc()
+    # AuDee: サイト移転に伴い更新停止中。
+    # 既存の docs/audee_rss.xml は凍結して公開を継続する。
+    # print("AuDee番組ページのRSSフィードを作成します。")
+    # print(f"URL: {audee_url}")
+    # print(f"出力先: {audee_output_path}")
+    # try:
+    #     create_audee_rss_file(audee_url, audee_output_path)
+    #     print("✅ AuDee RSSフィードの作成が完了しました。")
+    # except Exception as e:
+    #     has_error = True
+    #     print(f"AuDee RSS作成中にエラーが発生しました: {e}")
+    #     traceback.print_exc()
 
     # Bitfan: 伊集院光のタネ まとめ聴き（UPDATE）
     print("Bitfan UPDATEページのRSSフィードを作成します。")
