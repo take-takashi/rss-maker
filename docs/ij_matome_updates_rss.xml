@@ -4,7 +4,13 @@
     <title>伊集院光のタネ まとめ聴き</title>
     <link>https://ij-matome.bitfan.id/updates</link>
     <description>ニッポン放送で放送している伊集院光のラジオ番組『伊集院光のちょいタネ』と『伊集院光のタネ』の過去の放送が聴けるアーカイブサービス。</description>
-    <lastBuildDate>Wed, 15 Apr 2026 02:04:45 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2026 02:12:27 +0000</lastBuildDate>
+    <item>
+      <title>アフタートーク第246回『自由律俳句再鑑賞会』</title>
+      <link>https://ij-matome.bitfan.id/contents/375275</link>
+      <description/>
+      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/ce12f813225e0dd5823bad910ad81688.jpg"/>
+    </item>
     <item>
       <title>アフタートーク第245回『安田美香の枝葉』</title>
       <link>https://ij-matome.bitfan.id/contents/374870</link>
@@ -70,12 +76,6 @@
       <link>https://ij-matome.bitfan.id/contents/371754</link>
       <description/>
       <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/f8d6196649d21bff9eda53d442a271e5.jpg"/>
-    </item>
-    <item>
-      <title>第503回～第507回 2026年3月30日～4月3日放送『93.自由律俳句』</title>
-      <link>https://ij-matome.bitfan.id/contents/371753</link>
-      <description/>
-      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/f4f14add8979c8c5c260c263245a33f3.jpg"/>
     </item>
   </channel>
 </rss>
