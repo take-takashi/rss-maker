@@ -4,7 +4,13 @@
     <title>伊集院光のタネ まとめ聴き</title>
     <link>https://ij-matome.bitfan.id/updates</link>
     <description>ニッポン放送で放送している伊集院光のラジオ番組『伊集院光のちょいタネ』と『伊集院光のタネ』の過去の放送が聴けるアーカイブサービス。</description>
-    <lastBuildDate>Mon, 04 May 2026 02:30:36 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2026 02:25:19 +0000</lastBuildDate>
+    <item>
+      <title>アフタートーク第251回『安田美香の枝葉』</title>
+      <link>https://ij-matome.bitfan.id/contents/382806</link>
+      <description/>
+      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/417a23b1f610ec150b7dfa7e38a4b76c.jpg"/>
+    </item>
     <item>
       <title>第531回～第534回 2026年4月28日～2026年5月1日放送『102.ガーデニングから農家まで！園芸！』『143.お土産ばなし』『153.トラベルトラブル』『91.全速力で走った』</title>
       <link>https://ij-matome.bitfan.id/contents/380382</link>
@@ -70,12 +76,6 @@
       <link>https://ij-matome.bitfan.id/contents/379227</link>
       <description/>
       <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/1c088d1ac61d951bc1e6522b86f4b882.jpg"/>
-    </item>
-    <item>
-      <title>第529回 2026年4月23日放送『今後のタネ告知回』</title>
-      <link>https://ij-matome.bitfan.id/contents/379226</link>
-      <description/>
-      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/563767b8ef62c3fe9e1e6d644140ec6b.jpg"/>
     </item>
   </channel>
 </rss>
