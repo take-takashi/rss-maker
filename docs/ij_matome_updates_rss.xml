@@ -4,7 +4,13 @@
     <title>伊集院光のタネ まとめ聴き</title>
     <link>https://ij-matome.bitfan.id/updates</link>
     <description>ニッポン放送で放送している伊集院光のラジオ番組『伊集院光のちょいタネ』と『伊集院光のタネ』の過去の放送が聴けるアーカイブサービス。</description>
-    <lastBuildDate>Mon, 11 May 2026 02:44:31 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 May 2026 02:37:09 +0000</lastBuildDate>
+    <item>
+      <title>アフタートーク第254回『前島花音の枝葉』</title>
+      <link>https://ij-matome.bitfan.id/contents/384155</link>
+      <description/>
+      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/3c8fc686443cc806cd9b5c146dd6e768.jpg"/>
+    </item>
     <item>
       <title>第535回～第538回 2026年5月5日～2026年5月8日放送『114.復活希望』『129.こどもの本』『122.自転車にまつわるアレコレ』『64.行ったことないけど行きたい場所』</title>
       <link>https://ij-matome.bitfan.id/contents/384144</link>
@@ -70,12 +76,6 @@
       <link>https://ij-matome.bitfan.id/contents/380380</link>
       <description/>
       <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/c84aa9d1f7c03c6b81eff9dca945ee3c.jpg"/>
-    </item>
-    <item>
-      <title>第534回 2026年5月1日放送『91.全速力で走った』</title>
-      <link>https://ij-matome.bitfan.id/contents/380378</link>
-      <description/>
-      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/b0114329f4b63f967a165a58d86f2561.jpg"/>
     </item>
   </channel>
 </rss>
