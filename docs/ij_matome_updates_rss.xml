@@ -4,7 +4,13 @@
     <title>伊集院光のタネ まとめ聴き</title>
     <link>https://ij-matome.bitfan.id/updates</link>
     <description>ニッポン放送で放送している伊集院光のラジオ番組『伊集院光のちょいタネ』と『伊集院光のタネ』の過去の放送が聴けるアーカイブサービス。</description>
-    <lastBuildDate>Thu, 28 May 2026 02:44:34 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 29 May 2026 02:48:04 +0000</lastBuildDate>
+    <item>
+      <title>アフタートーク第260回『棚橋麻衣の枝葉』</title>
+      <link>https://ij-matome.bitfan.id/contents/391380</link>
+      <description/>
+      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/301e2aa57418303df715efb537eecd77.jpg"/>
+    </item>
     <item>
       <title>アフタートーク第259回『安田美香の枝葉』</title>
       <link>https://ij-matome.bitfan.id/contents/388467</link>
@@ -70,12 +76,6 @@
       <link>https://ij-matome.bitfan.id/contents/385902</link>
       <description/>
       <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/3a6700d968e9b24626daba41e9f6405b.jpg"/>
-    </item>
-    <item>
-      <title>第533回～第537回 2026年5月11日～5月15日放送『113.レコードの記憶』</title>
-      <link>https://ij-matome.bitfan.id/contents/385901</link>
-      <description/>
-      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/91cbce6dabde2d7e28985fa160cb5c79.jpg"/>
     </item>
   </channel>
 </rss>
