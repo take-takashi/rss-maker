@@ -4,7 +4,13 @@
     <title>伊集院光のタネ まとめ聴き</title>
     <link>https://ij-matome.bitfan.id/updates</link>
     <description>ニッポン放送で放送している伊集院光のラジオ番組『伊集院光のちょいタネ』と『伊集院光のタネ』の過去の放送が聴けるアーカイブサービス。</description>
-    <lastBuildDate>Mon, 08 Jun 2026 03:33:22 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2026 02:43:28 +0000</lastBuildDate>
+    <item>
+      <title>アフタートーク第262回『熊谷実帆の枝葉』</title>
+      <link>https://ij-matome.bitfan.id/contents/395068</link>
+      <description/>
+      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/8cada219dd5548c88f05a44fe3494790.jpg"/>
+    </item>
     <item>
       <title>第551回～第554回 2026年6月2日～2026年6月5日放送『175.ゲストとコレ話して』『128.タネデミー賞』</title>
       <link>https://ij-matome.bitfan.id/contents/394706</link>
@@ -70,12 +76,6 @@
       <link>https://ij-matome.bitfan.id/contents/392293</link>
       <description/>
       <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/fc7161d68e894085dfb8444f92bca191.jpg"/>
-    </item>
-    <item>
-      <title>第548回 2026年5月27日放送『145.それが今の妻ではありません』</title>
-      <link>https://ij-matome.bitfan.id/contents/392292</link>
-      <description/>
-      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/448227b966078cc0c92c43eacfeb21f4.jpg"/>
     </item>
   </channel>
 </rss>
