@@ -4,7 +4,13 @@
     <title>伊集院光のタネ まとめ聴き</title>
     <link>https://ij-matome.bitfan.id/updates</link>
     <description>ニッポン放送で放送している伊集院光のラジオ番組『伊集院光のちょいタネ』と『伊集院光のタネ』の過去の放送が聴けるアーカイブサービス。</description>
-    <lastBuildDate>Tue, 16 Jun 2026 03:38:08 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jun 2026 03:37:54 +0000</lastBuildDate>
+    <item>
+      <title>アフタートーク第266回『東島衣里の枝葉』</title>
+      <link>https://ij-matome.bitfan.id/contents/398931</link>
+      <description/>
+      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/b651155ab0305a9149528b8ad1760c55.jpg"/>
+    </item>
     <item>
       <title>アフタートーク第265回『安田美香の枝葉』</title>
       <link>https://ij-matome.bitfan.id/contents/397560</link>
@@ -70,12 +76,6 @@
       <link>https://ij-matome.bitfan.id/contents/394706</link>
       <description/>
       <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/78663a8c8c4ae5b3280ac03088a3c11c.jpg"/>
-    </item>
-    <item>
-      <title>第548回～第552回 2026年6月1日～6月5日放送『128.タネデミー賞』</title>
-      <link>https://ij-matome.bitfan.id/contents/394700</link>
-      <description/>
-      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/600d316d63f68135ce100f8bcdbf3e30.jpg"/>
     </item>
   </channel>
 </rss>
