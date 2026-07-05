@@ -4,7 +4,13 @@
     <title>伊集院光のタネ まとめ聴き</title>
     <link>https://ij-matome.bitfan.id/updates</link>
     <description>ニッポン放送で放送している伊集院光のラジオ番組『伊集院光のちょいタネ』と『伊集院光のタネ』の過去の放送が聴けるアーカイブサービス。</description>
-    <lastBuildDate>Sat, 04 Jul 2026 02:30:12 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jul 2026 02:39:46 +0000</lastBuildDate>
+    <item>
+      <title>アフタートーク第271回『棚橋麻衣の枝葉』</title>
+      <link>https://ij-matome.bitfan.id/contents/406596</link>
+      <description/>
+      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/4e2e18277d5c6fae20293e5cbe1a3ae2.jpg"/>
+    </item>
     <item>
       <title>アフタートーク第270回『安田美香の枝葉』</title>
       <link>https://ij-matome.bitfan.id/contents/399372</link>
@@ -70,12 +76,6 @@
       <link>https://ij-matome.bitfan.id/contents/399526</link>
       <description/>
       <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/25827936b123d237b12831562317b9aa.jpg"/>
-    </item>
-    <item>
-      <title>第562回 2026年6月19日放送『75.スポーツ見に行った』</title>
-      <link>https://ij-matome.bitfan.id/contents/399524</link>
-      <description/>
-      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/b399cc800b97a57f1da78c29f4d8f0cd.jpg"/>
     </item>
   </channel>
 </rss>
