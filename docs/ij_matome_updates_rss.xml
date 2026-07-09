@@ -4,7 +4,13 @@
     <title>伊集院光のタネ まとめ聴き</title>
     <link>https://ij-matome.bitfan.id/updates</link>
     <description>ニッポン放送で放送している伊集院光のラジオ番組『伊集院光のちょいタネ』と『伊集院光のタネ』の過去の放送が聴けるアーカイブサービス。</description>
-    <lastBuildDate>Wed, 08 Jul 2026 02:13:58 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jul 2026 02:32:15 +0000</lastBuildDate>
+    <item>
+      <title>アフタートーク第273回『棚橋麻衣の枝葉』</title>
+      <link>https://ij-matome.bitfan.id/contents/406626</link>
+      <description/>
+      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/19dce5c74d69a0ca5443065ae4a7aaf7.jpg"/>
+    </item>
     <item>
       <title>アフタートーク第272回『東島衣里の枝葉』</title>
       <link>https://ij-matome.bitfan.id/contents/406625</link>
@@ -70,12 +76,6 @@
       <link>https://ij-matome.bitfan.id/contents/401690</link>
       <description/>
       <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/7cc9932ab2a0f6732da11024124b1151.jpg"/>
-    </item>
-    <item>
-      <title>第566回 2026年6月26日放送『86.落ち込んだ時の復活方法』</title>
-      <link>https://ij-matome.bitfan.id/contents/401689</link>
-      <description/>
-      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/6164fa7e75066187c133e08785fe3184.jpg"/>
     </item>
   </channel>
 </rss>
