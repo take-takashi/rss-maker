@@ -4,7 +4,13 @@
     <title>伊集院光のタネ まとめ聴き</title>
     <link>https://ij-matome.bitfan.id/updates</link>
     <description>ニッポン放送で放送している伊集院光のラジオ番組『伊集院光のちょいタネ』と『伊集院光のタネ』の過去の放送が聴けるアーカイブサービス。</description>
-    <lastBuildDate>Fri, 17 Jul 2026 02:12:17 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2026 02:01:35 +0000</lastBuildDate>
+    <item>
+      <title>アフタートーク第276回『竹内香苗の枝葉』</title>
+      <link>https://ij-matome.bitfan.id/contents/411307</link>
+      <description/>
+      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/d56c34042d2fc0cff8ca4e2597d94ed4.jpg"/>
+    </item>
     <item>
       <title>アフタートーク第275回『安田美香の枝葉』</title>
       <link>https://ij-matome.bitfan.id/contents/410488</link>
@@ -70,12 +76,6 @@
       <link>https://ij-matome.bitfan.id/contents/406603</link>
       <description/>
       <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/b245182f4286aede180264b0fa87aa3d.jpg"/>
-    </item>
-    <item>
-      <title>第570回 2026年7月3日放送『108.干物グランプリ』</title>
-      <link>https://ij-matome.bitfan.id/contents/406601</link>
-      <description/>
-      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/6aba86cc39e6f0ac5b3862291ebbc292.jpg"/>
     </item>
   </channel>
 </rss>
