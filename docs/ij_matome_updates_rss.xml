@@ -4,7 +4,13 @@
     <title>伊集院光のタネ まとめ聴き</title>
     <link>https://ij-matome.bitfan.id/updates</link>
     <description>ニッポン放送で放送している伊集院光のラジオ番組『伊集院光のちょいタネ』と『伊集院光のタネ』の過去の放送が聴けるアーカイブサービス。</description>
-    <lastBuildDate>Mon, 20 Jul 2026 02:33:27 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 02:11:54 +0000</lastBuildDate>
+    <item>
+      <title>アフタートーク第277回『前島花音の枝葉』</title>
+      <link>https://ij-matome.bitfan.id/contents/411351</link>
+      <description/>
+      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/134b2f9ef6b2c6eca8af6821f2019469.jpg"/>
+    </item>
     <item>
       <title>第575回～第578回 2026年7月14日～2026年7月17日放送『46.アニマル話』『34.今迷ってること』『124.寝坊と遅刻』『100.双子・三つ子・四つ子の話』</title>
       <link>https://ij-matome.bitfan.id/contents/411289</link>
@@ -70,12 +76,6 @@
       <link>https://ij-matome.bitfan.id/contents/409221</link>
       <description/>
       <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/c6187f373a930851a901ed1742ff3b7f.jpg"/>
-    </item>
-    <item>
-      <title>第573回 2026年7月9日放送『81.ちょい愚痴』</title>
-      <link>https://ij-matome.bitfan.id/contents/409216</link>
-      <description/>
-      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/c36b2ccd9ac264687c1f704d52351ed8.jpg"/>
     </item>
   </channel>
 </rss>
