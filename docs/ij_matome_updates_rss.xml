@@ -4,7 +4,13 @@
     <title>伊集院光のタネ まとめ聴き</title>
     <link>https://ij-matome.bitfan.id/updates</link>
     <description>ニッポン放送で放送している伊集院光のラジオ番組『伊集院光のちょいタネ』と『伊集院光のタネ』の過去の放送が聴けるアーカイブサービス。</description>
-    <lastBuildDate>Tue, 18 Aug 2026 00:57:01 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Aug 2026 00:57:44 +0000</lastBuildDate>
+    <item>
+      <title>アフタートーク第288回『安田美香の枝葉』</title>
+      <link>https://ij-matome.bitfan.id/contents/423253</link>
+      <description/>
+      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/ba52ad00a77ce616cfb97f862fe18baa.jpg"/>
+    </item>
     <item>
       <title>アフタートーク第287回『前島花音の枝葉』</title>
       <link>https://ij-matome.bitfan.id/contents/423249</link>
@@ -70,12 +76,6 @@
       <link>https://ij-matome.bitfan.id/contents/420222</link>
       <description/>
       <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/475c4cb75d0003ccf9cb62ac9774b58d.jpg"/>
-    </item>
-    <item>
-      <title>第589回 2026年8月6日放送『11. 祖父と祖母』</title>
-      <link>https://ij-matome.bitfan.id/contents/420219</link>
-      <description/>
-      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/c5cb81169d2d2b3e10858e202b47ff8a.jpg"/>
     </item>
   </channel>
 </rss>
