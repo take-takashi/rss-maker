@@ -4,7 +4,13 @@
     <title>伊集院光のタネ まとめ聴き</title>
     <link>https://ij-matome.bitfan.id/updates</link>
     <description>ニッポン放送で放送している伊集院光のラジオ番組『伊集院光のちょいタネ』と『伊集院光のタネ』の過去の放送が聴けるアーカイブサービス。</description>
-    <lastBuildDate>Mon, 24 Aug 2026 00:59:55 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 25 Aug 2026 00:59:16 +0000</lastBuildDate>
+    <item>
+      <title>アフタートーク第288回『熊谷実帆の枝葉』</title>
+      <link>https://ij-matome.bitfan.id/contents/426304</link>
+      <description/>
+      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/c06f8127413158f3f34c0727b84aa0ce.jpg"/>
+    </item>
     <item>
       <title>第595回～第598回 2026年8月18日～2026年8月21日放送『50. 最新サービスあれこれ』『03. 鳥と私と』『98. 親や祖父母が何回もする話』『105. くいしん坊！パンザイ』</title>
       <link>https://ij-matome.bitfan.id/contents/425570</link>
@@ -70,12 +76,6 @@
       <link>https://ij-matome.bitfan.id/contents/422556</link>
       <description/>
       <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/48fffb851f3cc96041d19d904bd93351.jpg"/>
-    </item>
-    <item>
-      <title>第593回 2026年8月13日放送『97. 職業病カルテ』</title>
-      <link>https://ij-matome.bitfan.id/contents/422555</link>
-      <description/>
-      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/a4015744448b9d08fa8a192e054553ca.jpg"/>
     </item>
   </channel>
 </rss>
