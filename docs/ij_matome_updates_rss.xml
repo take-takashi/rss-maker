@@ -4,7 +4,13 @@
     <title>伊集院光のタネ まとめ聴き</title>
     <link>https://ij-matome.bitfan.id/updates</link>
     <description>ニッポン放送で放送している伊集院光のラジオ番組『伊集院光のちょいタネ』と『伊集院光のタネ』の過去の放送が聴けるアーカイブサービス。</description>
-    <lastBuildDate>Mon, 14 Sep 2026 03:04:06 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2026 03:06:11 +0000</lastBuildDate>
+    <item>
+      <title>アフタートーク第299回『熊谷実帆の枝葉』</title>
+      <link>https://ij-matome.bitfan.id/contents/433924</link>
+      <description/>
+      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/4c48da87b279f47352b1a85483dc031f.jpg"/>
+    </item>
     <item>
       <title>第607回～第610回 2026年9月8日～2026年9月11日放送『26. 旅行の目的は？』『110. カラオケGO』『44. ゾーンに入った話』『80. 大人になってからできた友達』</title>
       <link>https://ij-matome.bitfan.id/contents/438839</link>
@@ -70,12 +76,6 @@
       <link>https://ij-matome.bitfan.id/contents/435774</link>
       <description/>
       <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/b0a4725febe3d8c217d85d4ed12c77c4.jpg"/>
-    </item>
-    <item>
-      <title>第613回～第617回 2026年8月31日～9月1日放送『104. 今日の昼ごはん』</title>
-      <link>https://ij-matome.bitfan.id/contents/435769</link>
-      <description/>
-      <enclosure length="0" type="image/jpeg" url="https://bitfan-id.s3.ap-northeast-1.amazonaws.com/store/0f14d8674a7e7300e771d0111de71585.jpg"/>
     </item>
   </channel>
 </rss>
