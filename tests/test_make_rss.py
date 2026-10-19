@@ -1,17 +1,24 @@
 """一時停止中のRSS生成経路の回帰テスト。"""
 
+import importlib
 import runpy
 from pathlib import Path
 
 import pytest
-from src.rss_maker import generate_rss
 
 SCRIPT = Path(__file__).resolve().parents[1] / "make_rss.py"
 BITFAN_URL = "https://ij-matome.bitfan.id/updates"
 BITFAN_OUTPUT = "docs/ij_matome_updates_rss.xml"
 
 
-def test_paused_jfn_does_not_block_bitfan(monkeypatch, capsys):
+@pytest.fixture
+def generate_rss(monkeypatch):
+    # The Actions job executes make_rss.py from the repository root.
+    monkeypatch.syspath_prepend(str(SCRIPT.parent))
+    return importlib.import_module("src.rss_maker.generate_rss")
+
+
+def test_paused_jfn_does_not_block_bitfan(monkeypatch, capsys, generate_rss):
     calls = []
 
     def generate_bitfan(url, output):
@@ -33,7 +40,7 @@ def test_paused_jfn_does_not_block_bitfan(monkeypatch, capsys):
     assert "JFN Pods RSS更新は一時停止中" in capsys.readouterr().out
 
 
-def test_bitfan_failure_still_exits_with_error(monkeypatch):
+def test_bitfan_failure_still_exits_with_error(monkeypatch, generate_rss):
     def fail_bitfan(*_args):
         raise RuntimeError("Bitfan unavailable")
 
